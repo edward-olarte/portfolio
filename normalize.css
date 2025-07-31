@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d31;
+  color: white;
+}
+
+/* Header completo */
+header {
+  background: linear-gradient(135deg, #0f0f14, #8f94fb);
+  padding: 1.5rem;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+
+/* Imagen del logo */
+.logo img {
+  height: 70px;
+  width: auto;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+.logo img:hover {
+  animation: logoHover 0.8s ease;
+}
+@keyframes logoHover {
+  0% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 4px 4px 25px rgba(143, 148, 251, 0.7);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+  }
+}
+
+
+/* Menú horizontal */
+nav ul {
+  list-style: none;   /* quita los puntitos */
+  padding: 0;
+  margin: 0;
+
+  /* ESTA ES LA CLAVE */
+  display: flex;      /* pone los <li> en línea horizontal */
+  gap: 2rem;          /* espacio entre ellos */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #393b4d;
+  animation: linea 2s infinite;
+}
+.portada {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2.5rem;
+  box-shadow: #8f94fb 0px 0px 15px;
+}
+.portada:hover {
+  animation: pulsate 1.5s infinite;
+  filter: brightness(1.3);
+}
+/* Animación de pulsación */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(177, 177, 226);
+  animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes linea {
+  0% {
+    border-bottom: 2px solid #ffe600;
+    transform: scaleX(0);
+  }
+  50% {
+    border-bottom: 2px solid #ffe600;
+    transform: scaleX(1);
+  }
+  100% {
+    border-bottom: 2px solid #ffe600;
+    transform: scaleX(0);
+  }
+}
+.descripcion {
+  text-align: center;
+}
